@@ -19,7 +19,7 @@ export const AVAILABLE_QUIZES = [
   },
   {
     id: 4,
-    title: "Accessiblity",
+    title: "Accessibility",
     iconPath: "/accessibility-icon.svg",
     backgroundColor: "#F6E7FF",
   },

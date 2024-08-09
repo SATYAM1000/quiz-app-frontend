@@ -46,13 +46,8 @@ export default function QuizPage() {
   };
 
   const handleSubmitQuiz = () => {
-    router.push({
-      pathname: "/result",
-      query: {
-        score: correctAnswersCount,
-        totalQuestions: quiz.questions.length,
-      },
-    });
+    const url = `/result?title=${quiz.title}&score=${correctAnswersCount}&totalQuestions=${quiz.questions.length}`;
+    router.push(url);
   };
 
   const progress =
@@ -65,11 +60,11 @@ export default function QuizPage() {
       {/* --------LEFT SIDE----------- */}
       <div className={`w-full lg:flex-1`}>
         <div className="inline-flex flex-col lg:h-[452px] items-center justify-between relative flex-[0_0_auto]">
-          <div className="flex flex-col w-[465px] items-start gap-[27px] relative flex-[0_0_auto]">
+          <div className="flex flex-col w-full items-start gap-[27px] relative flex-[0_0_auto]">
             <div className="relative italic self-stretch mt-[-1.00px] text-[20px]">
               Question {currentQuestionIndex + 1} of {quiz.questions.length}
             </div>
-            <p className="relative self-stretch font-heading-m font-[number:var(--heading-l-bold-font-weight)] text-[#313e51] text-[36px] tracking-[var(--heading-m-letter-spacing)] leading-[var(--heading-m-line-height)] [font-style:var(--heading-m-font-style)]">
+            <p className=" self-stretch font-heading-m font-[number:var(--heading-l-bold-font-weight)] text-[#313e51] text-[36px] tracking-[var(--heading-m-letter-spacing)] leading-[var(--heading-m-line-height)] [font-style:var(--heading-m-font-style)] ">
               {quiz.questions[currentQuestionIndex].question}
             </p>
           </div>
@@ -99,25 +94,23 @@ export default function QuizPage() {
           );
         })}
 
-        {!isUserAnswered ? (
-          <Button
-            name="Submit Answer"
-            onClick={onAnswerSubmit}
-            disabled={!selectedOption}
-          />
-        ) : isQuizCompleted ? (
-          <Button
-            name="Submit Quiz"
-            onClick={handleSubmitQuiz}
-            disabled={false}
-          />
-        ) : (
-          <Button
-            name="Next Question"
-            onClick={handleNextQuestion}
-            disabled={false}
-          />
-        )}
+        <Button
+          name={
+            !isUserAnswered
+              ? "Submit Answer"
+              : isQuizCompleted
+              ? "Submit Quiz"
+              : "Next Question"
+          }
+          onClick={
+            !isUserAnswered
+              ? onAnswerSubmit
+              : isQuizCompleted
+              ? handleSubmitQuiz
+              : handleNextQuestion
+          }
+          disabled={!selectedOption && !isUserAnswered}
+        />
       </div>
     </section>
   );
