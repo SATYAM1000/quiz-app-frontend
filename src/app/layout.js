@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
       <body
         className={`bg-veryLightBlue w-full min-h-screen relative transition-all duration-300 ${rubik.className}`}
       >
-        <Wrapper className={"relative z-10 w-full h-auto flex flex-col"}>
+        <Wrapper className={"relative z-10 w-full h-auto flex flex-col overflow-hidden "}>
           <Header />
           {children}
         </Wrapper>
