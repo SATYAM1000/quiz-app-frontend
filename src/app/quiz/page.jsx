@@ -47,7 +47,7 @@ export default function QuizPage() {
 
   const handleSubmitQuiz = () => {
     router.push({
-      pathname: "/quiz/result",
+      pathname: "/result",
       query: {
         score: correctAnswersCount,
         totalQuestions: quiz.questions.length,
