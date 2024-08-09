@@ -41,6 +41,7 @@ export default function QuizPage({ searchParams }) {
       setCorrectAnswersCount(correctAnswersCount + 1);
     }
   };
+  
 
   const handleSubmitQuiz = () => {
     const url = `/result?title=${quiz.title}&score=${correctAnswersCount}&totalQuestions=${quiz.questions.length}`;
