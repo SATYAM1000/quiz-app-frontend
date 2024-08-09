@@ -2,7 +2,7 @@ import AvailableQuizTopic from "@/components/home/AvailableQuizTopic";
 import { AVAILABLE_QUIZES } from "@/utils/constants";
 export default function Home() {
   return (
-    <main className={"w-full h-auto flex flex-col lg:flex-row gap-20 "}>
+    <main className={"w-full h-auto flex flex-col lg:flex-row gap-20 mb-20 "}>
       {/* ------LEFT SIDE----------- */}
       <div className={"w-full lg:flex-1  "}>
         <div className="inline-flex flex-col items-start gap-12 relative flex-[0_0_auto]">
@@ -14,7 +14,7 @@ export default function Home() {
               Frontend Quiz!
             </div>
           </div>
-          <p className="relative w-[465px] italic font-body-s font-[number:var(--body-s-font-weight)] text-[#626c7f] text-[length:var(--body-s-font-size)] tracking-[var(--body-s-letter-spacing)] leading-[var(--body-s-line-height)] ">
+          <p className="relative w-full italic font-body-s font-[number:var(--body-s-font-weight)] text-[#626c7f] text-[length:var(--body-s-font-size)] tracking-[var(--body-s-letter-spacing)] leading-[var(--body-s-line-height)] ">
             Pick a subject to get started.
           </p>
         </div>
