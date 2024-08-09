@@ -9,7 +9,7 @@ export default function Button({ name, onClick, disabled }) {
       disabled={disabled}
       className={`cursor-pointer mt-4 flex items-center justify-center gap-2 p-6 relative self-stretch w-full flex-[0_0_auto] rounded-3xl overflow-hidden shadow-[0px_16px_40px_#8fa0c124] transition-all duration-300 ${
         disabled
-          ? "bg-[#a729f5] cursor-not-allowed"
+          ? "bg-gray-400 cursor-not-allowed"
           : "bg-[#a729f5] hover:bg-purple-400"
       }`}
     >

@@ -3,6 +3,7 @@ import "./globals.css";
 import BackgroundPattern from "@/components/global/BackgroundPattern";
 import Wrapper from "@/components/global/Wrapper";
 import Header from "@/components/global/Header";
+import { Toaster } from "sonner";
 
 const rubik = Rubik({ subsets: ["latin"] });
 
@@ -22,6 +23,7 @@ export default function RootLayout({ children }) {
           {children}
         </Wrapper>
         <BackgroundPattern />
+        <Toaster />
       </body>
     </html>
   );

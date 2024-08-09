@@ -5,6 +5,7 @@ import { useSearchParams } from "next/navigation";
 import QuizOptions from "@/components/quiz/QuizOptions";
 import Button from "@/components/quiz/Button";
 import { useRouter } from "next/navigation";
+import { toast } from "sonner";
 
 export default function QuizPage() {
   const router = useRouter();
@@ -35,6 +36,12 @@ export default function QuizPage() {
   };
 
   const onAnswerSubmit = () => {
+    console.log("answer submitted")
+    if (selectedOption === null) {
+      toast.error("Please select an option");
+      console.log("in")
+      return;
+    }
     setIsUserAnswered(true);
     const correctAnswer = quiz.questions[currentQuestionIndex].answer;
     const isCorrect = selectedOption === correctAnswer;
