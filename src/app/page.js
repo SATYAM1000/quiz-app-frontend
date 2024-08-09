@@ -7,10 +7,10 @@ export default function Home() {
       <div className={"w-full lg:flex-1  "}>
         <div className="inline-flex flex-col items-start gap-12 relative flex-[0_0_auto]">
           <div className="inline-flex flex-col items-start gap-2 relative flex-[0_0_auto]">
-            <div className="relative w-fit mt-[-1.00px] text-[48px] heading-l-regular font-[number:var(--heading-l-regular-font-weight)] text-[#313e51] lg:text-[length:var(--heading-l-regular-font-size)] tracking-[var(--heading-l-regular-letter-spacing)] leading-[var(--heading-l-regular-line-height)] whitespace-nowrap [font-style:var(--heading-l-regular-font-style)]">
+            <div className="relative w-fit mt-[-1.00px] text-[44px] heading-l-regular font-[number:var(--heading-l-regular-font-weight)] text-[#313e51] lg:text-[length:var(--heading-l-regular-font-size)] tracking-[var(--heading-l-regular-letter-spacing)] leading-[var(--heading-l-regular-line-height)] whitespace-nowrap [font-style:var(--heading-l-regular-font-style)]">
               Welcome to the
             </div>
-            <div className="relative w-fit heading-l-bold text-[48px] font-[number:var(--heading-l-bold-font-weight)] text-[#313e51] lg:text-[length:var(--heading-l-bold-font-size)] tracking-[var(--heading-l-bold-letter-spacing)] leading-[var(--heading-l-bold-line-height)] whitespace-nowrap [font-style:var(--heading-l-bold-font-style)]">
+            <div className="relative w-fit heading-l-bold text-[44px] font-[number:var(--heading-l-bold-font-weight)] text-[#313e51] lg:text-[length:var(--heading-l-bold-font-size)] tracking-[var(--heading-l-bold-letter-spacing)] leading-[var(--heading-l-bold-line-height)] whitespace-nowrap [font-style:var(--heading-l-bold-font-style)]">
               Frontend Quiz!
             </div>
           </div>
